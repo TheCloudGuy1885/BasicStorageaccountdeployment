@@ -1,1 +1,1 @@
-# BasicStorageaccountdeployment
+# BICEP Principles
