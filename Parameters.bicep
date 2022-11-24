@@ -1,4 +1,4 @@
-param vmUserName string = 'password1234'
+param vmUserName string = 'user1234'
 @secure()
 param vmPassword string
 
