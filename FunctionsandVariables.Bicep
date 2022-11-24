@@ -1,3 +1,8 @@
+param vmUserName string = 'user1234'
+@secure()
+param vmPassword string
+
+
 var location = resourceGroup().location
 var vmName = 'vm${uniqueString(resourceGroup().id)}'
 
@@ -10,8 +15,8 @@ resource vm 'Microsoft.Compute/virtualMachines@2021-03-01' = {
     }
     osProfile: {
       computerName: vmName
-      adminUsername: 'user1234'
-      adminPassword: 'Pa$$Word1234!'
+      adminUsername: vmUserName
+      adminPassword: vmPassword
     }
     storageProfile: {
       imageReference: {
